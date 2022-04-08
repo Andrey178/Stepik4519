@@ -32,16 +32,7 @@ def load_openpyxl(xls_filename):  # Open xlsx file with openpyxl library and cou
     # print(sheet_names)
     sh = wb[sheet_names[0]]
 
-    def find_min(sheet):
-        print(type(sheet))
-        n_min = sheet.cell(row=7, column=3).value
-        print(f"{str(n_min)} => {str(sheet.cell(row=7, column=3).coordinate)}")
-        for row_num in sheet['C7':'C27']:
-            temp = row_num[0].value
-            n_min = min(n_min, temp)
-        print(n_min)
-
-        # find_min(sh)
+    # find_min(sh)
     find_mean_salary(sh)
     find_median_salary(sh)
 
@@ -53,7 +44,18 @@ def find_median_salary(sheet):
         med_salary = sorted(row[1:])[3]
         if region_med_salary < med_salary:
             rich_region, region_med_salary = row[0], med_salary
+
     print(f"{rich_region} : {region_med_salary}")
+
+
+def find_min(sheet):
+    print(type(sheet))
+    n_min = sheet.cell(row=7, column=3).value
+    print(f"{str(n_min)} => {str(sheet.cell(row=7, column=3).coordinate)}")
+    for row_num in sheet['C7':'C27']:
+        temp = row_num[0].value
+        n_min = min(n_min, temp)
+    print(n_min)
 
 
 def find_mean_salary(sheet):
