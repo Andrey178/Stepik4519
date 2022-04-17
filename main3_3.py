@@ -3,7 +3,7 @@ import xmltodict
 
 from main2_1 import get_xls_file
 
-filename, file_url = 'map2.osm', 'https://stepik.org/media/attachments/lesson/245681/map2.osm'
+filename, file_url = 'map3.osm', 'https://stepik.org/media/attachments/lesson/245681/map2.osm'
 
 
 def task(name):
