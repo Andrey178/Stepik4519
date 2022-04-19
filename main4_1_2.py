@@ -7,7 +7,7 @@ import math
 
 dpi = 80
 fig = plt.figure(dpi = dpi, figsize = (512 / dpi, 384 / dpi) )
-mpl.rcParams.update({'font.size': 10})синус и косинус
+mpl.rcParams.update({'font.size': 10})
 
 plt.axis([0, 10, -1.5, 1.5])
 
